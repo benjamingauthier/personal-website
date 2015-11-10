@@ -9,17 +9,17 @@ if($_POST) {
     $email = ($_POST['email']);
     $subject_form = ($_POST['subject']);
     $message_form = ($_POST['message']);
-    $contact_name = ($_POST['name']);
+    $contact_name = ($_POST['contact-name']);
 
     if(!isEmail($email) || !checkdnsrr(array_pop(explode("@",$email)),"MX")) {
         header("HTTP/1.1 404 Not Found");
     }
     else {
-        $to      = 'team@mink.so';
-        $subject = 'Contact depuis le site web de LastTram de la part de ' . $contact_name;
+        $to      = 'benjamin-gauthier@live.fr';
+        $subject = 'Contact depuis mon site perso de la part de ' . $contact_name;
         $message = 'Sujet : ' . $subject_form . 'Message : ' $message_form;
-        $headers = 'From: contact@mink.so' . "\r\n" .
-        'Reply-To: contact@mink.so' . "\r\n" .
+        $headers = 'From: contact@benjamingauthier.com' . "\r\n" .
+        'Reply-To: contact@benjamingauthier.com' . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
 
         try
