@@ -9,7 +9,7 @@ if($_POST) {
     $email = ($_POST['email']);
     $subject_form = ($_POST['subject']);
     $message_form = ($_POST['message']);
-    $contact_name = ($_POST['contact-name']);
+    $contact_name = ($_POST['name']);
 
     if(!isEmail($email) || !checkdnsrr(array_pop(explode("@",$email)),"MX")) {
         header("HTTP/1.1 404 Not Found");
