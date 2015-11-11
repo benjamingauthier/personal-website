@@ -17,7 +17,7 @@ if($_POST) {
     else {
         $to      = 'benjamin-gauthier@live.fr';
         $subject = 'Contact depuis mon site perso de la part de ' . $contact_name;
-        $message = 'Sujet : ' . $subject_form . 'Message : ' $message_form;
+        $message = 'Sujet : ' . $subject_form . 'Message : ' . $message_form;
         $headers = 'From: contact@benjamingauthier.com' . "\r\n" .
         'Reply-To: contact@benjamingauthier.com' . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
